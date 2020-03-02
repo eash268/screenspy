@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block main %}
+	{% for slug in slugs %}
+	<a class="btn green" href="https://prnt.sc/{{slug}}">https://prnt.sc/{{slug}}</a>
+	{% endfor %}
+{% endblock %}
+
+{% block scripts %}
+	{{ super() }}
+{% endblock %}

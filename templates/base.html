@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    {% block head %}
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+
+        <!-- Title and Favicon -->
+        <title>  </title>
+        <link rel="shortcut icon" href="{{url_for('static',filename='favicon.ico')}}" type="image/x-icon">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/index.css') }}" />
+
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,500" type="text/css" />
+    {% endblock %}
+</head>
+
+
+
+<body>
+    <nav>
+        <div class="nav-wrapper blue darken-4">
+            <a href="#" data-target="slide-out" class="sidenav-trigger blue-text"><i class="material-icons">menu</i></a>
+            <a href="#" class="brand-logo grey-text text-lighten-2"><b>Screen</b>Spy</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="collapsible.html" class="white-text"><i class="left material-icons grey-text text-lighten-4">person_pin</i>Eash Aggarwal<i class="right material-icons grey-text text-lighten-2">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div id="content" class="content">
+            {% block main %}{% endblock %}
+        </div>
+
+        <div class="row">
+            <div class="col s10 push-s1 center-align">
+                <p class="grey-text text-lighten-1">Copyright © 2016-2019. All rights reserved. The tools and information found on Chicken's platform are not intended to be a substitute for care provided by a trained professional. Communication through the Chicken platform is secure and encrypted, but is not monitored continuously by a mental health professional and thus does not constitute a disclosure.</p>
+            </div>
+        </div>
+    </main>
+
+    {% block scripts %}
+        <!-- JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+        <script src="{{ url_for('static',filename='js/index.js') }}"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                openSc();
+            });
+        </script>
+    {% endblock %}
+</body>
+
+</html>
