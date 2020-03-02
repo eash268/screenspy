@@ -43,7 +43,7 @@ eventlet==0.21.0
 fake-factory==0.5.3
 ffprobe==0.5
 flake8==3.5.0
-Flask==0.12.2
+Flask==1.0
 Flask-BabelEx==0.9.3
 Flask-Bcrypt==0.7.1
 Flask-Cors==3.0.6
